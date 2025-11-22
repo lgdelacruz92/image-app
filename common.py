@@ -10,3 +10,8 @@ def make_new_image(img):
     xnew_image = Image.new('RGB', (img.width, img.height))
     new_image_pixels = xnew_image.load()
     return (new_image_pixels, xnew_image)
+
+def make_new_image_wh(w, h):
+    xnew_image = Image.new('RGB', (w, h))
+    new_image_pixels = xnew_image.load()
+    return (new_image_pixels, xnew_image)
