@@ -20,19 +20,6 @@ def make_bw(img, pixels, npix):
         for y in range(img.height):
             r, g, b = pixels[x, y]
             v = int((0.299 * r) + (0.587 * g) + (0.114 * b))
-            # npix[x,y] = (v, v, v)
-            # if v > 40:
-            #     if v <= 60:
-            #         npix[x,y] = dark
-            #     elif v <= 120:
-            #         npix[x,y] = light
-            #     elif v <= 200:
-            #         npix[x, y] = highlight
-            #     else:
-            #         npix[x, y] = (255, 255, 255)
-            # else:
-            #     npix[x,y] = (255, 255, 255)
-
             arr[v] += 1
     make_scatter_plot([i for i in range(256)], arr)
 
